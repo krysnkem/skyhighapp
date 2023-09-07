@@ -1,0 +1,1 @@
+class UnableToGetDataException implements Exception {}
