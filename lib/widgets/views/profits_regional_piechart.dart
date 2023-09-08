@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:skyhighapp/entities/Indicator_color.dart';
+import 'package:skyhighapp/entities/for_sky_api/Indicator_color.dart';
 import 'package:skyhighapp/utilities/capitalize.dart';
 
 import '../../entities/for_sky_api/order_filter.dart';
@@ -29,10 +29,8 @@ class ProfitsRegionalPieChart extends StatelessWidget {
 
     detailsOfSalesForEachRegion.forEach(
       (key, value) {
-        print('$key: $value');
 
         if (key != OrderRegion.all && value > 0) {
-          print('$key: $value');
 
           final sector = PieSector(
             color: colors[key.index],

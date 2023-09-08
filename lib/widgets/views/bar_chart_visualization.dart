@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:skyhighapp/widgets/views/filters/barchart_filters/barchart_filter_views.dart';
 
-import '../../entities/Indicator_color.dart';
+import '../../entities/for_sky_api/Indicator_color.dart';
 import '../../providers/barchart_data_provider.dart';
 import 'bar_chart_views.dart';
 

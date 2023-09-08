@@ -5,6 +5,10 @@ import '../entities/for_sky_api/order_filter.dart';
 import '../utilities/map_values.dart';
 
 abstract class DataQuery {
+
+
+
+  
   List<OrderData> filterDataBy({
     required List<OrderData> salesDataList,
     required OrderFilter filter,

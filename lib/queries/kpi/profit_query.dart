@@ -45,12 +45,10 @@ class ProfitQuery extends KpiQuery {
     required List<OrderData> salesDataList,
     OrderFilter? filter,
   }) {
-    if (filter != null) {
-      salesDataList = filterDataBy(
-        salesDataList: salesDataList,
-        filter: filter.copyWith(year: year),
-      );
-    }
+    salesDataList = filterDataBy(
+      salesDataList: salesDataList,
+      filter: filter?.copyWith(year: year) ?? OrderFilter(year: year),
+    );
     double total = 0.0;
     for (final data in salesDataList) {
       if (data.profit > 0) {

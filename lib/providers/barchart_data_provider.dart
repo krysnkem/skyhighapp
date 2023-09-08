@@ -25,7 +25,6 @@ class BarChartDataProvider extends ChangeNotifier {
 
   String get getTotalProfit {
     var totalProfit = repository.totalProfitForTheYear(year);
-    print('Unfilterd total profit $totalProfit');
     return parseAmount(totalProfit);
   }
 
@@ -33,7 +32,7 @@ class BarChartDataProvider extends ChangeNotifier {
     if (amount >= 1000 && amount < 1000000) {
       amount = amount / 1000;
       return "${amount.toStringAsFixed(2)}K";
-    } else if (amount > 1000000) {
+    } else if (amount >= 1000000) {
       amount = amount / 1000000;
       return "${amount.toStringAsFixed(2)}M";
     } else {
@@ -105,4 +104,6 @@ class BarChartDataProvider extends ChangeNotifier {
       return value;
     });
   }
+
+ 
 }

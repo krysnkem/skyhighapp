@@ -19,7 +19,6 @@ class PieChartDataProvider with ChangeNotifier {
   late Map<OrderRegion, double> profitForEachRegion;
 
   void update(BarChartDataProvider dataProvider) {
-    print('Update called pie chart data provider');
     repository = dataProvider.repository;
     year = dataProvider.year;
     updateRegionPieChart();
@@ -38,7 +37,6 @@ class PieChartDataProvider with ChangeNotifier {
       year: year,
       filter: pieFilter,
     );
-    print("filtered total profit: $profits");
     return profits;
   }
 

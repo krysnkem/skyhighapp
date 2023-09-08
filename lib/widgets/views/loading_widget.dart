@@ -11,7 +11,7 @@ class LoadingWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          CircularProgressIndicator.adaptive(),
+          CircularProgressIndicator(),
           SizedBox(
             height: 30,
           ),

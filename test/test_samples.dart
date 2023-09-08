@@ -1,15 +1,32 @@
 import 'package:skyhighapp/api/model/order_data_model.dart';
 import 'package:skyhighapp/api/services/data_api_service.dart';
+import 'package:skyhighapp/api/services/location_serivice.dart';
 import 'package:skyhighapp/entities/for_sky_api/order_data.dart';
 import 'package:skyhighapp/entities/for_sky_api/order_filter.dart';
 import 'package:skyhighapp/queries/kpi/profit_query.dart';
 import 'package:skyhighapp/repository/sales_data_repository.dart';
+import 'package:skyhighapp/utilities/extensions.dart';
 import 'package:skyhighapp/utilities/parse_json.dart';
 
 import 'fixture_reader.dart';
 
 void main() async {
-  testProfitQueryWithFilteredTotal();
+  testLocationService();
+}
+
+void testLocationService() async {
+  final locationService = LocationService();
+
+  final predictions =
+      await locationService.placeAutoComplete(placeInput: 'Ikorodu');
+  predictions?.forEach((element) async {
+    print(element.customToString());
+    final cordinate =
+        await locationService.getPlaceCoordinate("ChIJjU0jUEkwGw0RV_waR6OqEFQ");
+    print(cordinate);
+  });
+
+  // print(result);
 }
 
 void otherTests() {

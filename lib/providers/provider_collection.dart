@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:skyhighapp/providers/location_provider.dart';
 import 'package:skyhighapp/providers/piechart_data_provider.dart';
 
+import '../api/services/location_serivice.dart';
 import '../core/fake_api_service.dart';
-import '../entities/Indicator_color.dart';
+import '../entities/for_sky_api/Indicator_color.dart';
 import '../repository/sales_data_repository.dart';
 import 'barchart_data_provider.dart';
 import 'color_provider.dart';
@@ -20,6 +22,9 @@ class AppProviderCollection extends MultiProvider {
                 profitColor: Colors.green[600]!,
                 salesColor: Colors.blue,
               ),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => LocationProvider(LocationService()),
             ),
             ChangeNotifierProvider(
               create: (_) => BarChartDataProvider(
