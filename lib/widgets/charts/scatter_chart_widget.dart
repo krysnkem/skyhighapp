@@ -83,7 +83,6 @@ class _ScatterChartWidgetState extends State<ScatterChartWidget> {
   }
 
   void touchCallback(FlTouchEvent event, LineTouchResponse? touchResponse) {
-    print(event.localPosition);
     if (touchResponse?.lineBarSpots != null && event is FlTapUpEvent) {
       setState(() {
         final spotIndex = touchResponse?.lineBarSpots?[0].spotIndex ?? -1;

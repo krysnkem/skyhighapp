@@ -54,7 +54,6 @@ class ProfitsBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Profit set with data rebuilt');
 
     return Column(
       children: [
@@ -77,7 +76,6 @@ class SalesBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Sales set with data rebuilt');
 
     return Column(
       children: [

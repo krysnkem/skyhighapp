@@ -3,7 +3,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:skyhighapp/providers/provider_collection.dart';
 import 'package:skyhighapp/resources/app_palette.dart';
 import 'package:skyhighapp/widgets/screens/main_app_flow.dart';
-import 'widgets/screens/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,6 +26,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme:
               ColorScheme.fromSeed(seedColor: AppPalette.greenmaterial),
+          scaffoldBackgroundColor: Colors.white,
           useMaterial3: true,
         ),
         home: const MainAppFlow(),

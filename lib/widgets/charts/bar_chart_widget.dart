@@ -20,7 +20,6 @@ class BarChartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constratint) {
-      print(constratint);
       return AspectRatio(
         aspectRatio: constratint.maxWidth > 400 &&
                 constratint.maxHeight == double.infinity

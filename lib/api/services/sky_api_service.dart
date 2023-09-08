@@ -24,7 +24,6 @@ class SkyApiService implements DataApiService {
       // return compute(pareseResponseBody, body);
       return pareseResponseBody(body);
     } on Exception catch (e) {
-      print(e);
       throw UnableToGetDataException();
     }
   }

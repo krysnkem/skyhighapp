@@ -14,7 +14,6 @@ class SegmentFilterForRegion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('SegmentFilter rebuilt');
 
     return DropDownFilterWidget<Segment>(
       value: context.select<PieChartDataProvider, Segment>(
@@ -46,7 +45,6 @@ class SubCategoryFilterForRegion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Subcategory rebuilt');
 
     return DropDownFilterWidget<SubCategory>(
       value: context.select<PieChartDataProvider, SubCategory>(

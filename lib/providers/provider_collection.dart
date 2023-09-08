@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:skyhighapp/providers/bottom_nav_provider.dart';
 import 'package:skyhighapp/providers/location_provider.dart';
+import 'package:skyhighapp/providers/map_provider.dart';
 import 'package:skyhighapp/providers/piechart_data_provider.dart';
 
 import '../api/services/location_serivice.dart';
@@ -24,7 +26,13 @@ class AppProviderCollection extends MultiProvider {
               ),
             ),
             ChangeNotifierProvider(
-              create: (context) => LocationProvider(LocationService()),
+              create: (context) => LocationProvider(),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => BottomNavProvider(),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => MapProvider(MapLocationService()),
             ),
             ChangeNotifierProvider(
               create: (_) => BarChartDataProvider(

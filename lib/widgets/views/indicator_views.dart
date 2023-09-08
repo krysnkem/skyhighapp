@@ -23,7 +23,6 @@ class SalesIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Sales Indicator built');
 
     final totalSales = context.select<BarChartDataProvider, String>(
       (barChartProvider) => barChartProvider.getTotalSales,
@@ -50,7 +49,6 @@ class ProfitIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Profit Indicator built');
     final totalSales = context.select<BarChartDataProvider, String>(
       (barChartProvider) => barChartProvider.getTotalProfit,
     );

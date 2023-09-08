@@ -15,18 +15,15 @@ void main() async {
 }
 
 void testLocationService() async {
-  final locationService = LocationService();
+  final locationService = MapLocationService();
 
   final predictions =
       await locationService.placeAutoComplete(placeInput: 'Ikorodu');
   predictions?.forEach((element) async {
-    print(element.customToString());
     final cordinate =
         await locationService.getPlaceCoordinate("ChIJjU0jUEkwGw0RV_waR6OqEFQ");
-    print(cordinate);
   });
 
-  // print(result);
 }
 
 void otherTests() {

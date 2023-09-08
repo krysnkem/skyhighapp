@@ -6,7 +6,7 @@ import 'package:flutter_google_places_hoc081098/google_maps_webservice_places.da
 import '../../secrets/secrets.dart';
 import 'package:http/http.dart' as http;
 
-class LocationService {
+class MapLocationService {
   Future<List<Prediction>?> placeAutoComplete(
       {required String placeInput}) async {
     try {
@@ -29,7 +29,6 @@ class LocationService {
         response.body;
       }
     } on Exception catch (e) {
-      print(e.toString());
     }
     return null;
   }
@@ -54,7 +53,7 @@ class LocationService {
     return null;
   }
 
-  LocationService._sharedInstance();
-  static final _shared = LocationService._sharedInstance();
-  factory LocationService() => _shared;
+  MapLocationService._sharedInstance();
+  static final _shared = MapLocationService._sharedInstance();
+  factory MapLocationService() => _shared;
 }

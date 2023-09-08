@@ -11,7 +11,6 @@ class YearFilter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('YearFilter rebuilt');
     return DropDownFilterWidget<String>(
       value: context
           .select<BarChartDataProvider, String>((provider) => provider.year),

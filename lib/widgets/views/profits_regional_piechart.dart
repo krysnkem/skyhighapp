@@ -16,7 +16,6 @@ class ProfitsRegionalPieChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Profit pie chart built');
     final colors = context.read<ColorProvider>().materialColors;
 
     List<PieSector> sectors = [];
