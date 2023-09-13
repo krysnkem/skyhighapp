@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:skyhighapp/providers/bottom_nav_provider.dart';
-import 'package:skyhighapp/widgets/screens/map_location_view.dart';
-import 'package:skyhighapp/widgets/views/filters/piechart_filters/regional_filters.dart';
+import 'package:skyhighapp/UI/screens/map_location_view.dart';
+import 'package:skyhighapp/UI/views/filters/piechart_filters/regional_filters.dart';
 
 import '../../providers/barchart_data_provider.dart';
 import '../views/bar_chart_visualization.dart';

@@ -6,6 +6,7 @@ import 'package:skyhighapp/providers/map_provider.dart';
 import 'package:skyhighapp/providers/piechart_data_provider.dart';
 
 import '../api/services/location_serivice.dart';
+import '../api/services/sky_api_service.dart';
 import '../core/fake_api_service.dart';
 import '../entities/for_sky_api/Indicator_color.dart';
 import '../repository/sales_data_repository.dart';
@@ -36,7 +37,7 @@ class AppProviderCollection extends MultiProvider {
             ),
             ChangeNotifierProvider(
               create: (_) => BarChartDataProvider(
-                SalesDataRepository(FakeApiService()),
+                SalesDataRepository(SkyApiService()),
               ),
             ),
             ChangeNotifierProxyProvider<BarChartDataProvider,

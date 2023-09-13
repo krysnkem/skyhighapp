@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:skyhighapp/providers/provider_collection.dart';
 import 'package:skyhighapp/resources/app_palette.dart';
-import 'package:skyhighapp/widgets/screens/main_app_flow.dart';
+import 'package:skyhighapp/UI/screens/main_app_flow.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

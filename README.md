@@ -1,16 +1,19 @@
 # skyhighapp
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## CASE STUDY: SKY HIGH DATA HISTORY APP
+
+The Sky High company has just employeed me to build an application to show historical data
+with map feature embedded
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## how to test the app
+1. Launch the appetize instance from the link below
+2. Set the android instance option to android 12 (Android 11 and 10 not working properly)
+
+- [Appetize instance](https://appetize.io/app/46q7kd5zq3kvoz3ivssyody4oq?debug=true&device=pixel4&osVersion=11.0&scale=75)
+
+

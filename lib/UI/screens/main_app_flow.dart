@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:skyhighapp/providers/location_provider.dart';
-import 'package:skyhighapp/widgets/screens/app_needs_permission.dart';
-import 'package:skyhighapp/widgets/screens/home_page.dart';
+import 'package:skyhighapp/UI/screens/app_needs_permission.dart';
+import 'package:skyhighapp/UI/screens/home_page.dart';
 
 class MainAppFlow extends StatelessWidget {
   const MainAppFlow({super.key});
