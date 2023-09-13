@@ -1,4 +1,4 @@
-# skyhighapp
+# SKY HIGH APP
 
 ## CASE STUDY: SKY HIGH DATA HISTORY APP
 
