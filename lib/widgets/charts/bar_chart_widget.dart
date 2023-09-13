@@ -19,12 +19,17 @@ class BarChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constratint) {
+    return LayoutBuilder(builder: (context, constraint) {
+      var aspectRatio = 0.0;
+      if (constraint.maxWidth <= 400) {
+        aspectRatio = 16 / 8;
+      } else if (constraint.maxWidth <= 700) {
+        aspectRatio = 16 / 3;
+      } else {
+        aspectRatio = 16 / 2;
+      }
       return AspectRatio(
-        aspectRatio: constratint.maxWidth > 400 &&
-                constratint.maxHeight == double.infinity
-            ? 16 / 3
-            : 16 / 8,
+        aspectRatio: aspectRatio,
         child: BarChart(
           BarChartData(
             barGroups: _chartGroups(),

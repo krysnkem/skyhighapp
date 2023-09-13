@@ -7,7 +7,7 @@ import '../../secrets/secrets.dart';
 import 'package:http/http.dart' as http;
 
 class MapLocationService {
-  Future<List<Prediction>?> placeAutoComplete(
+  Future<Iterable<Prediction?>> placeAutoComplete(
       {required String placeInput}) async {
     try {
       Map<String, dynamic> querys = {
@@ -29,8 +29,9 @@ class MapLocationService {
         response.body;
       }
     } on Exception catch (e) {
+      return [];
     }
-    return null;
+    return [];
   }
 
   Future<Map<String, dynamic>?> getPlaceCoordinate(String placeId) async {

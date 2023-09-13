@@ -46,6 +46,7 @@ dependencies:
   google_fonts: ^5.1.0
   permission_handler: ^10.4.5
   flutter_google_places_hoc081098: ^2.0.0-beta.0
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
   assets:
     - lib/core/response.json
     - json/
+    - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

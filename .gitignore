@@ -46,3 +46,7 @@ app.*.map.json
 
 #Secrets folder
 /lib/secrets/
+
+
+#hide remove
+.vscode

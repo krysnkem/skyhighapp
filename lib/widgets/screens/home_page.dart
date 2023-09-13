@@ -27,9 +27,10 @@ class MyHomePage extends StatelessWidget {
       //   title: Text(title),
       // ),
       body: [
-        const DataVisualizationView(),
+        const SafeArea(child: DataVisualizationView()),
         const MapLocationView(),
       ][pageIndex],
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
           context.read<BottomNavProvider>().pageIndex = index;
@@ -38,13 +39,12 @@ class MyHomePage extends StatelessWidget {
         selectedIndex: pageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
+            icon: Icon(Icons.trending_up),
+            label: 'Data History',
           ),
           NavigationDestination(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.public),
+            label: 'Map',
           ),
         ],
       ),
@@ -52,20 +52,13 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class DataVisualizationView extends StatefulWidget {
+class DataVisualizationView extends StatelessWidget {
   const DataVisualizationView({
     super.key,
   });
 
   @override
-  State<DataVisualizationView> createState() => _DataVisualizationViewState();
-}
-
-class _DataVisualizationViewState extends State<DataVisualizationView>
-    with AutomaticKeepAliveClientMixin {
-  @override
   Widget build(BuildContext context) {
-    super.build(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: FutureBuilder(
@@ -162,9 +155,6 @@ class _DataVisualizationViewState extends State<DataVisualizationView>
       ),
     );
   }
-
-  @override
-  bool get wantKeepAlive => true;
 }
 
 class PiechartDataVisualization extends StatelessWidget {

@@ -19,8 +19,6 @@ class MapProvider with ChangeNotifier {
 
   Marker? marker;
 
-  String locationText = '';
-
   void setMarker() {
     marker = Marker(
         markerId: const MarkerId("1"),
@@ -37,6 +35,12 @@ class MapProvider with ChangeNotifier {
     );
   }
 
+  Future<void> moveCamertoCurrentUserLocation() async {
+    await setLocationToCurrentUserLocation();
+    _mapController.animateCamera(CameraUpdate.newLatLng(_currentLatLng));
+    notifyListeners();
+  }
+
   void setMapController(GoogleMapController controller) async {
     _mapController = controller;
     // String val = "json/google_map_light_theme.json";
@@ -49,7 +53,7 @@ class MapProvider with ChangeNotifier {
   Future<void> changeLocation(Prediction description) async {
     final result =
         await _locationService.getPlaceCoordinate(description.placeId!);
-    final latLong = LatLng.fromJson(result)!;
+    final latLong = LatLng(result!["lat"], result!["lng"]);
     _currentLatLng = latLong;
     _mapController.animateCamera(
       CameraUpdate.newCameraPosition(
@@ -60,12 +64,11 @@ class MapProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<List<Prediction>?> getListOfPredictions({required String text}) {
+  Future<Iterable<Prediction?>> getListOfPredictions({required String text}) {
     return _locationService.placeAutoComplete(placeInput: text);
   }
 
   void onSuggestionSelected(Prediction? suggestion) async {
-    locationText = suggestion?.structuredFormatting?.mainText ?? "";
     if (suggestion != null) {
       await changeLocation(suggestion);
     }
