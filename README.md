@@ -13,4 +13,4 @@ with map feature embedded.
 4. Test the map feature on the second tab.
 5. Enter a location to search for in the field and select it.
 
-- [Click here to test the applicaion](https://appetize.io/app/46q7kd5zq3kvoz3ivssyody4oq?debug=true&device=pixel4&osVersion=11.0&scale=75)
+- [Click here to test the application](https://appetize.io/app/46q7kd5zq3kvoz3ivssyody4oq?debug=true&device=pixel4&osVersion=11.0&scale=75)
