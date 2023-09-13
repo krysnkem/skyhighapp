@@ -4,10 +4,8 @@
 
 ## CASE STUDY: SKY HIGH DATA HISTORY APP
 
-The Sky High company has just employeed me to build an application to show historical data
-with map feature embedded
-
-A few resources to get you started if this is your first Flutter project:
+The Sky High company has just employed me to build an application to show historical data
+with map feature embedded.
 
 
 ## how to test the app
